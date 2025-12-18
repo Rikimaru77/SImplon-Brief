@@ -5,24 +5,27 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/antijingoist/opendyslexic@0.1.1/opendyslexic.css">
     <title>Document</title>
-    <link rel="stylesheet" href="reset.css">
+    <link rel="stylesheet" href="assets-login-register/reset.css">
     <link rel="stylesheet" href="assets-login-register/style-login-register.css">
 </head>
 <body>
     <header class="navbar">
         <div class="logo">
-            <span id="LogoBtn">logo</span>
+            <img id="logo-btn" src="https://forums.pixeltailgames.com/uploads/default/optimized/3X/2/5/25d7338131c87c44e87d326b7248904d9598acb8_2_258x250.png">
+        </div>
+        <div class="nav-button">
+
         </div>
     </header>
     
-    <main id="WelcomePage">
-        <p id="LogInTxt">You already have an account ? Log in !</p>
-        <button id="LogInButtonA" class="CenterButtons">Log in !</button>
-        <button id="RegisterButtonA" class="CenterButtons">Register !</button>
-        <p id="RegisterTxt">You don't have an account ? Register !</p>
+    <main id="welcome-page">
+        <p id="login-txt">You already have an account ? Log in !</p>
+        <button id="login-button-a" class="center-buttons">Log in !</button><br>
+        <button id="register-button-a" class="center-buttons">Register !</button>
+        <p id="register-txt">You don't have an account ? Register !</p>
     </main>
 
-    <section id="RegisterForm">
+    <section id="register-form">
         <form>
             <div>
                 <label for="lastname">Last Name</label>
@@ -42,8 +45,8 @@
                 </select>
             </div>
             <div>
-                <label for="CPN">City and Postal Number</label>
-                <input id="CPN" name="CPN" type="text">
+                <label for="cpn">City and Postal Number</label>
+                <input id="cpn" name="cpn" type="text">
             </div>
             <div>
                 <label for="username">Username</label>
@@ -62,19 +65,19 @@
                 <input id="confirmpassword" name="confirmpassword" type="password" required>
             </div>
             <button type="submit">Register</button>
-            <p>Already have an account ? <button id="LogInButtonB">Log in here !</button></p>
+            <p>Already have an account ? <button id="login-button-b">Log in here !</button></p>
         </form>
     </section>
-    <section id="LogInForm">
+    <section id="login-form">
         <form>
             <div>
-                <input id="LoginID" name="LoginID" type="text" required placeholder="Username, Phone Number or Email">
+                <input id="login-id" name="login-id" type="text" required placeholder="Username, Phone Number or Email">
             </div>
             <div>
-                <input id="passwordID" name="passwordID" type="password" required placeholder="Password">
+                <input id="password-id" name="password-id" type="password" required placeholder="Password">
             </div>
             <button type="submit">Log In</button>
-            <p id="RegBtnTxt">You don't have an account ? <button id="RegisterButtonB">Register here !</button></p>
+            <p id="reg-btn-txt">You don't have an account ? <button id="register-button-b">Register here !</button></p>
         </form>
     </section>
 <script src="assets-login-register/script-login-register.js"></script>

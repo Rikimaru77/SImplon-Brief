@@ -1,11 +1,11 @@
-const Registerbtn = document.getElementById("RegisterButtonA");
-const Registerbtn1 = document.getElementById("RegisterButtonB");
-const RegisterForm = document.getElementById("RegisterForm");
-const WelcomeUser = document.getElementById("WelcomePage");
-const WelcomePageButton = document.getElementById("LogoBtn");
-const LogInbtn = document.getElementById("LogInButtonA");
-const LogInbtn1 = document.getElementById("LogInButtonB");
-const LogInForm = document.getElementById("LogInForm");
+const Registerbtn = document.getElementById("register-button-a");
+const Registerbtn1 = document.getElementById("register-button-b");
+const RegisterForm = document.getElementById("register-form");
+const WelcomeUser = document.getElementById("welcome-page");
+const WelcomePageButton = document.getElementById("logo-btn");
+const LogInbtn = document.getElementById("login-button-a");
+const LogInbtn1 = document.getElementById("login-button-b");
+const LogInForm = document.getElementById("login-form");
 
 Registerbtn.addEventListener("click",()=> {
     RegisterForm.style.display = "flex";
@@ -31,7 +31,7 @@ LogInbtn1.addEventListener("click", ()=> {
     WelcomeUser.style.display = "none";
 })
 
-LogoBtn.addEventListener("click", ()=> {
+WelcomePageButton.addEventListener("click", ()=> {
     LogInForm.style.display = "none";
     RegisterForm.style.display = "none";
     WelcomeUser.style.display = "block";

@@ -1,3 +1,8 @@
+
+
+
+
+
 @font-face {
     font-family: 'OpenDyslexic';
     src: url('fonts/OpenDyslexic-Regular.woff2') format('woff2'),
@@ -8,21 +13,62 @@
 
 body {
     font-family: 'OpenDyslexic', 'Arial', 'Helvetica', sans-serif;
+    background-color: #6A4FB5;
+    font-size: 16px;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    
 }
 
-#RegisterForm {
+#login-txt {
+    margin-bottom: 1vh;
+}
+
+#register-txt {
+    margin-top: 1vh;
+}
+
+header {
+    background-color: #7269E1;
+    font-size: 16px;
+    text-align: left;
+    max-height: 6vh;
+}
+
+#logo-btn {
+    height: 6vh;
+}
+
+main {
+    position: absolute;
+    top : 31vh;
+}
+
+#register-form {
     display: none;
 }
 
-#LogInForm {
+#login-form {
     display: none;
 }
 
-.CenterButtons {
-    margin : 0% 2vh 0% 2vh;
-    min-width : 100vh;
-    min-height: 10.8vh;
-    flex-direction:row;
+.center-buttons {
+    margin: 0 2.5vw;
+    min-width : 95vw;
+    min-height: 15vh;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
+    font-size: 32px;
+    border-style: none;
+}
+
+#login-button-a {
+    background-color: #7156DF;
+}
+
+#register-button-a {
+    background-color: #2821B3;
 }
