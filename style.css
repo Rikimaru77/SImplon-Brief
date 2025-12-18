@@ -10,6 +10,10 @@ body {
     font-family: 'OpenDyslexic', 'Arial', 'Helvetica', sans-serif;
 }
 
-#register {
+#RegisterForm {
+    display: none;
+}
+
+#LogInForm {
     display: none;
 }
