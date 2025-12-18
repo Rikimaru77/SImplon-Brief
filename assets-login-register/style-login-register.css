@@ -17,3 +17,12 @@ body {
 #LogInForm {
     display: none;
 }
+
+.CenterButtons {
+    margin : 0% 2vh 0% 2vh;
+    min-width : 100vh;
+    min-height: 10.8vh;
+    flex-direction:row;
+    justify-content: center;
+    align-items: center;
+}
