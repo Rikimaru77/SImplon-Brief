@@ -8,10 +8,12 @@
     <link rel="stylesheet" href="assets-login-register/reset.css">
     <link rel="stylesheet" href="assets-login-register/style-login-register.css">
 </head>
+
 <body>
-    <header class="navbar">
+    <header id ="navbar" class="navbar-class">
         <div class="logo">
-            <img id="logo-btn" src="https://forums.pixeltailgames.com/uploads/default/optimized/3X/2/5/25d7338131c87c44e87d326b7248904d9598acb8_2_258x250.png">
+            <img id="logo-img"  src="https://forums.pixeltailgames.com/uploads/default/optimized/3X/2/5/25d7338131c87c44e87d326b7248904d9598acb8_2_258x250.png">
+            <button id="logo-btn"></button>
         </div>
         <div class="nav-button">
             
@@ -28,16 +30,11 @@
     <section id="register-form">
         <form>
             <div>
-                <label for="lastname">Last Name</label>
-                <input id="lastname" name="lastname" type="text" required>
+                <input id="last-name" name="last-name" type="text" required placeholder="Last name">
+                <input id="first-name" name="first-name" type="text" required placeholder="First name">
             </div>
             <div>
-                <label for="firstname">First Name</label>
-                <input id="firstname" name="firstname" type="text" required>
-            </div>
-             <div>
-                <label for="country">Country</label>
-                <select id="country" name="country">
+                <select id="country" name="country" required>
                     <option value="">-- Select your country --</option>
                     <option value="FR">France</option>
                     <option value="BE">Belgique</option>
@@ -45,27 +42,19 @@
                 </select>
             </div>
             <div>
-                <label for="cpn">City and Postal Number</label>
-                <input id="cpn" name="cpn" type="text">
+                <input id="username" name="username" type="text" required placeholder="Type your Username">
             </div>
             <div>
-                <label for="username">Username</label>
-                <input id="username" name="username" type="text" required>
+                <input id="email" name="email" type="email" required placeholder="Type your email">
             </div>
             <div>
-                <label for="password">Password</label>
-                <input id="password" name="password" type="password" required>
+                <input id="password" name="password" type="password" required placeholder="Type your password">
             </div>
             <div>
-                <label for="email">Email</label>
-                <input id="email" name="email" type="email" required>
+                <input id="confirm-password" name="confirm-password" type="password" required placeholder="Confirm your password">
             </div>
-            <div>
-                <label for="confirmpassword">Confirm Password</label>
-                <input id="confirmpassword" name="confirmpassword" type="password" required>
-            </div>
-            <button type="submit">Register</button>
-            <p>Already have an account ? <button id="login-button-b">Log in here !</button></p>
+            <button id="get-registered-button" type="submit">Register</button>
+            <p id="log-btn-txt">Already have an account ? <button id="login-button-b">Log in here !</button></p>
         </form>
     </section>
     <section id="login-form">
@@ -76,7 +65,7 @@
             <div>
                 <input id="password-id" name="password-id" type="password" required placeholder="Password">
             </div>
-            <button type="submit">Log In</button>
+            <button id="get-loggedin-button" type="submit">Log In</button>
             <p id="reg-btn-txt">You don't have an account ? <button id="register-button-b">Register here !</button></p>
         </form>
     </section>
