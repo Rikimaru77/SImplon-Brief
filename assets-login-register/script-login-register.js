@@ -1,6 +1,6 @@
 const register_btn = document.getElementById("register-button-a");
 const register_btn_a = document.getElementById("register-button-b");
-const register_form = document.getElementById("register-form");
+const register_form = document.getElementById("register-part");
 const welcome_user = document.getElementById("welcome-page");
 const welcome_page_button = document.getElementById("logo-btn");
 const login_btn = document.getElementById("login-button-a");

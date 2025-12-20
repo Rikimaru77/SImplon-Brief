@@ -57,7 +57,7 @@ main {
     top : 31vh;
 }
 
-#register-form {
+#register-part {
     display: none;
 }
 
@@ -96,14 +96,25 @@ main {
 /*  End of the login and register access CSS code
     Start of the Register form CSS code                */
 
-    /* Making the buttons to be on the middle with the right size*/
-   
-    #register-form {
+    #register-part {
         text-align: center;
         position: relative;
-        margin-top: 20vh;
+        size:100vh;
     }
-   
+
+    #pfp-img {
+        position: relative;
+        top: -3vh;
+        justify-content: center;
+        min-height: 20vh;
+        max-height: 300px;
+    }
+
+    #register-part input::placeholder{
+        color:#FFFFFF;
+    }
+    
+    /* Making the buttons to be on the middle with the right size*/
     #last-name, #first-name, #country, #cpn, #username, #password,
     #email, #confirm-password, #get-registered-button {
         background-color: #7156DF;
@@ -151,9 +162,6 @@ main {
 /*  End of the Register form CSS code
     Start of the Login form CSS code    */
 
-    .login-form {
-        color: #FFFFFF;
-    }
     /* Making the buttons to be on the middle with the right size*/
     #login-id, #password-id, #get-loggedin-button {
         background-color: #7156DF;
@@ -163,11 +171,10 @@ main {
         min-width: 95vw;
         justify-content: center;
         margin: 0, 3vw;
-        color:#FFFFFF;
         text-align: center;
         font-size: 20px;
         margin-bottom: 5vh;
-        opacity: 60%;
+        opacity: 100%;
     }
 
     #login-id {
@@ -176,6 +183,7 @@ main {
 
     #get-loggedin-button {
         min-width: 50vw;
+        color:#FFFFFF;
     }
 
     #reg-btn-txt button {
@@ -186,3 +194,6 @@ main {
         border-bottom-color: white;
     }
     
+    #login-form input::placeholder{
+        color:#FFFFFF;
+    }
