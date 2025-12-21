@@ -61,41 +61,71 @@ while (register_form.style.display === "block") {
 }
 
 function register() {
+
   const username = document.getElementById("username").value;
   const password = document.getElementById("password").value;
-  const confirmpassword = document.getElementById("confirm-password").value;
+  const confirmPassword = document.getElementById("confirm-password").value;
+  const email = document.getElementById("email").value;
+  const lastname = document.getElementById("last-name").value;
+  const firstname = document.getElementById("first-name").value;
+  const country = document.getElementById("country").value;
 
-  if (password !== confirmpassword) {
+  if (
+    username === "" ||
+    password === "" ||
+    lastname === "" ||
+    firstname === "" ||
+    country === ""
+  ) {
+    alert("Please fill all of the forms");
+    return;
+    }
+
+  if (password !== confirmPassword) {
     alert("Passwords do not match");
     return;
   }
 
-  if (localStorage.getItem("user_" + username + "_exists")) {
+  if (localStorage.getItem("user_" + username + "_exist")) {
     alert("The username is already taken");
     return;
   }
 
-  localStorage.setItem("user" + username + "_password", password);
+  localStorage.setItem("user_" + username + "_password", password);
+  localStorage.setItem("user_" + username + "_email", email);
+  localStorage.setItem("user_" + username + "_country", country);
+  localStorage.setItem("user_" + username + "_lastname", lastname);
+  localStorage.setItem("user_" + username + "_firstname", firstname);
   localStorage.setItem("user_" + username + "_exist", "true");
 
   alert("User Register succesfully")
   window.location.href = "furrytel-profile.html";
 }
 
+document.getElementById("register-form").addEventListener("submit", function (event) {
+  event.preventDefault();
+  register();
+});
+
 function loginin() {
-  const usernameid = document.getElementById("username-id").value;
+  const usernameid = document.getElementById("username-id");
   const passwordid = document.getElementById("password-id").value;
 
-  if (passwordid !== localStorage.getItem("user_" + username +"_password" + password)) {
-    alert("incorrect password");
+  if (usernameid !== localStorage.getItem("user_" + username)) {
+    alert("Username does not exist");
     return;
   }
 
-  if (usernameid !== localStorage.getItem("user-" + username)) {
-    alert("Username does not exist");
+if (passwordid !== localStorage.getItem("user_" + usernameid + "_password" + password)) {
+    alert("incorrect password");
     return;
   }
 
   alert("Login successful");
   window.location.href = "furrytel-profile.html";
 }
+
+document.getElementById("login-form").addEventListener("submit", function (event) {
+  event.preventDefault();
+  loginin();
+});

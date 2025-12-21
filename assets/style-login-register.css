@@ -18,6 +18,19 @@ body {
     
 }
 
+body button {
+    font-family: 'OpenDyslexic', 'Arial', 'Helvetica', sans-serif;
+}
+
+body input::placeholder {
+    font-family: 'OpenDyslexic', 'Arial', 'Helvetica', sans-serif;
+    color: #FFFFFF;
+}
+
+body select {
+    font-family: 'OpenDyslexic', 'Arial', 'Helvetica', sans-serif;
+}
+
 header {
     background-color: #7269E1;
     font-size: 16px;
@@ -96,59 +109,47 @@ main {
 /*  End of the login and register access CSS code
     Start of the Register form CSS code                */
 
-    #register-part {
-        text-align: center;
-        position: relative;
-        size:100vh;
-    }
-
     #pfp-img {
-        position: relative;
-        top: -3vh;
-        justify-content: center;
-        min-height: 20vh;
-        max-height: 300px;
-    }
-
-    #register-part input::placeholder{
-        color:#FFFFFF;
+        height: clamp(10px, 20%, 300px);
+        width: clamp(10px, 20%, 300px);
+        border-radius: 50%;
+        object-fit: cover;
+        margin: 5vh 1% 7.5vh 1%;
     }
     
     /* Making the buttons to be on the middle with the right size*/
-    #last-name, #first-name, #country, #cpn, #username, #password,
+    #last-name, #first-name, #country, #username, #password,
     #email, #confirm-password, #get-registered-button {
         background-color: #7156DF;
         border-style: none;
         border-radius: 16vh;
-        min-height: 4.5vh;
-        min-width: 95vw;
-        justify-content: center;
-        margin: 0, 3vw;
+        height: clamp(35px, 40px, 45px);
+        width: 95%;
         color:#FFFFFF;
         text-align: center;
-        font-size: 20px;
-        margin-bottom: 2vh;
+        font-size: 50%;
+        margin-bottom: clamp(20px, 35px, 40px);
     }
 
-    #last-name, #first-name {
-        min-width: 35.3vw;
-        max-width: 35.3vw;
+    .names {
+        width: 100vw;
         text-align: center;
-        font-size: 50%;
+        display : flex;
+        justify-content: space-between;
+        gap:30vw;
+    }
+
+    #last-name {
+        margin-left: 2.5vw;
     }
 
     #first-name {
-        margin-left: 23vw;
-    }
-
-    .last-name-label {
-        position: absolute;
-        left: 2.5vw;
+        margin-right: 2.5vw;
     }
 
     #get-registered-button {
         margin-top:2vh;
-        min-width: 50vw;
+        width: clamp(25vw, 40vw, 800px);
     }
 
     #log-btn-txt button {
@@ -192,8 +193,4 @@ main {
         color: #FFFFFF;
         border-bottom-style: solid;
         border-bottom-color: white;
-    }
-    
-    #login-form input::placeholder{
-        color:#FFFFFF;
     }

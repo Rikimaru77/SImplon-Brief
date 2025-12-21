@@ -5,8 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/antijingoist/opendyslexic@0.1.1/opendyslexic.css">
     <title>Document</title>
-    <link rel="stylesheet" href="assets-login-register/reset.css">
-    <link rel="stylesheet" href="assets-login-register/style-login-register.css">
+    <link rel="stylesheet" href="assets/reset.css">
+    <link rel="stylesheet" href="assets/style-login-register.css">
 </head>
 
 <body>
@@ -28,34 +28,35 @@
     </main>
 
     <section id="register-part">
-        <img id ="pfp-img" src="assets-login-register/pfp/icon.png">
+        <img id ="pfp-img" src="assets/pfp/icon.png">
         <form id="register-form">
-            <div>
+        
+            <div class="names">
                 <input id="last-name" name="last-name" type="text" required placeholder="Last name">
                 <input id="first-name" name="first-name" type="text" required placeholder="First name">
             </div>
             <div>
                 <select id="country" name="country" required>
-                    <option value="">-- Select your country --</option>
+                    <option value="">Country</option>
                     <option value="FR">France</option>
                     <option value="BE">Belgique</option>
                     <option value="CH">Suisse (Sweich)</option>
                 </select>
             </div>
             <div>
-                <input id="username" name="username" type="text" required placeholder="Type your Username">
+                <input id="username" name="username" type="text" required placeholder="Username">
             </div>
             <div>
-                <input id="email" name="email" type="email" required placeholder="Type your email">
+                <input id="email" name="email" type="email" required placeholder="Email">
             </div>
             <div>
-                <input id="password" name="password" type="password" required placeholder="Type your password">
+                <input id="password" name="password" type="password" required placeholder="Password">
             </div>
             <div>
-                <input id="confirm-password" name="confirm-password" type="password" required placeholder="Confirm your password">
+                <input id="confirm-password" name="confirm-password" type="password" required placeholder="Confirm password">
             </div>
-            <button id="get-registered-button" onclick="register()">Register</button>
-            <p id="log-btn-txt">Already have an account ? <button id="login-button-b">Log in here !</button></p>
+            <button id="get-registered-button" type ="submit">Register</button>
+            <p id="log-btn-txt">Already have an account ? <button id="login-button-b" type="button">Log in here !</button></p>
         </form>
     </section>
     <section id="login-form">
@@ -67,9 +68,9 @@
                 <input id="password-id" name="password-id" type="password" required placeholder="Password">
             </div>
             <button id="get-loggedin-button" type="submit">Log In</button>
-            <p id="reg-btn-txt">You don't have an account ? <button onclick="loginin()">Register here !</button></p>
+            <p id="reg-btn-txt">You don't have an account ? <button id="register-button-b" type="button">Register here !</button></p>
         </form>
     </section>
-<script src="assets-login-register/script-login-register.js"></script>
+<script src="assets/script.js"></script>
 </body>
 </html>
