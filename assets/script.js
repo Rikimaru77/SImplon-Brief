@@ -59,3 +59,43 @@ welcome_page_button.addEventListener("click", ()=> {
 while (register_form.style.display === "block") {
     window.addEventListener('resize', checkOrientation);
 }
+
+function register() {
+  const username = document.getElementById("username").value;
+  const password = document.getElementById("password").value;
+  const confirmpassword = document.getElementById("confirm-password").value;
+
+  if (password !== confirmpassword) {
+    alert("Passwords do not match");
+    return;
+  }
+
+  if (localStorage.getItem("user_" + username + "_exists")) {
+    alert("The username is already taken");
+    return;
+  }
+
+  localStorage.setItem("user" + username + "_password", password);
+  localStorage.setItem("user_" + username + "_exist", "true");
+
+  alert("User Register succesfully")
+  window.location.href = "furrytel-profile.html";
+}
+
+function loginin() {
+  const usernameid = document.getElementById("username-id").value;
+  const passwordid = document.getElementById("password-id").value;
+
+  if (passwordid !== localStorage.getItem("user_" + username +"_password" + password)) {
+    alert("incorrect password");
+    return;
+  }
+
+  if (usernameid !== localStorage.getItem("user-" + username)) {
+    alert("Username does not exist");
+    return;
+  }
+
+  alert("Login successful");
+  window.location.href = "furrytel-profile.html";
+}
