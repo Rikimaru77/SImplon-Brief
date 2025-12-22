@@ -55,56 +55,56 @@ header {
 
 /* Login and Register access CSS code   */
 
-#login-txt {
+    #login-txt {
     margin-bottom: 1vh;
     font-size: 1.5vw;
-}
-
-#register-txt {
-    margin-top: 1vh;
-    font-size: 1.5vw;
-}
-
-main {
-    position: absolute;
-    top : 31vh;
-}
-
-#register-part {
-    display: none;
-}
-
-#login-form {
-    display: none;
-}
-
-.center-buttons {
-    margin: 0 2.5vw;
-    min-width : 95vw;
-    min-height: 15vh;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    font-size: 32px;
-    border-style: none;
-    border-radius: 16vh;
-}
-
-@media (orientation: landscape) {
-    .center-buttons {
-        border-radius: 4vh;
     }
-}
 
-#login-button-a {
-    background-color: #7156DF;
-    color: #FFFFFF;
-}
+    #register-txt {
+        margin-top: 1vh;
+        font-size: 1.5vw;
+    }
 
-#register-button-a {
-    background-color: #2821B3;
-    color: #FFFFFF;
-}
+    main {
+        position: absolute;
+        top : 31vh;
+    }
+
+    #register-part {
+        display: none;
+    }
+
+    #login-form {
+        display: none;
+    }
+
+    .center-buttons {
+        margin: 0 2.5vw;
+        min-width : 95vw;
+        min-height: 15vh;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        font-size: 32px;
+        border-style: none;
+        border-radius: 16vh;
+    }
+
+    @media (orientation: landscape) {
+        .center-buttons {
+            border-radius: 4vh;
+        }
+    }
+
+    #login-button-a {
+        background-color: #7156DF;
+        color: #FFFFFF;
+    }
+
+    #register-button-a {
+        background-color: #2821B3;
+        color: #FFFFFF;
+    }
 
 /*  End of the login and register access CSS code
     Start of the Register form CSS code                */

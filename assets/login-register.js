@@ -6,7 +6,11 @@ const welcome_page_button = document.getElementById("logo-btn");
 const login_btn = document.getElementById("login-button-a");
 const login_btn_a = document.getElementById("login-button-b");
 const login_form = document.getElementById("login-form");
-const header = document.getElementById("navbar");
+const currentUser = localStorage.getItem("current_username")
+
+if (localStorage.getItem("user_" + currentUser + "_connect") === "true") {
+    window.location.href = "furrytel-profile.html";
+}
 
 function checkOrientation() {
   const header = document.querySelector('header');
@@ -69,6 +73,7 @@ function register() {
   const lastname = document.getElementById("last-name").value;
   const firstname = document.getElementById("first-name").value;
   const country = document.getElementById("country").value;
+  const hashedPassword = simpleHash(password)
 
   if (
     username === "" ||
@@ -91,14 +96,16 @@ function register() {
     return;
   }
 
-  localStorage.setItem("user_" + username + "_password", password);
+  localStorage.setItem("user_" + username + "_password", hashedPassword);
   localStorage.setItem("user_" + username + "_email", email);
   localStorage.setItem("user_" + username + "_country", country);
   localStorage.setItem("user_" + username + "_lastname", lastname);
   localStorage.setItem("user_" + username + "_firstname", firstname);
   localStorage.setItem("user_" + username + "_exist", "true");
+  localStorage.setItem("user_" + username + "_connect", "true");
+  localStorage.setItem("user_" + username + "_username", username);
+  localStorage.setItem("active_user", username);
 
-  alert("User Register succesfully")
   window.location.href = "furrytel-profile.html";
 }
 
@@ -107,21 +114,34 @@ document.getElementById("register-form").addEventListener("submit", function (ev
   register();
 });
 
-function loginin() {
-  const usernameid = document.getElementById("username-id");
-  const passwordid = document.getElementById("password-id").value;
+function simpleHash(string) {
+  let hash = 0;
+  for (let i = 0; i < string.length; i++) {
+    const char = string.charCodeAt(i);
+    hash = (hash << 5) - hash + char;
+    hash |= 0;
+  }
+  return hash.toString();
+}
 
-  if (usernameid !== localStorage.getItem("user_" + username)) {
+function loginin() {
+  const username = document.getElementById("login-id").value;
+  const password = document.getElementById("password-id").value;
+  const hashedPassword = simpleHash(password);
+  const storedHash = localStorage.getItem("user_" + username + "_password");
+
+  if (!localStorage.getItem("user_" + username + "_exist")) {
     alert("Username does not exist");
     return;
   }
 
-if (passwordid !== localStorage.getItem("user_" + usernameid + "_password" + password)) {
-    alert("incorrect password");
+  if (hashedPassword !== storedHash) {
+    alert("Incorrect password");
     return;
   }
 
-  alert("Login successful");
+  localStorage.setItem("user_" + username + "_connect", "true");
+  localStorage.setItem("active_user", username);
   window.location.href = "furrytel-profile.html";
 }
 
