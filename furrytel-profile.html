@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/antijingoist/opendyslexic@0.1.1/opendyslexic.css">
+    <link rel="stylesheet" href="assets/style.css">
     <link rel="stylesheet" href="assets/reset.css">
     <link rel="stylesheet" href="assets/profile.css">
     <title>Document</title>
@@ -20,8 +21,42 @@
     </header>
 
     <main id="main">
-        <div>
-        </div>
+        <img id="pfp-img" src="assets/pfp/icon.png">
+        <form id="infos-form">
+            <img id="ptbg" class="background" src="assets/background/background.png">
+            <img id="lsbg" class="background" src="assets/background/background-landscape.png">
+            <div class="names">
+                <input id="last-name" name="last-name" type="text" readonly><input id="first-name" name="first-name" type="text" readonly>
+            </div>
+            <div>
+                <input id="username" name="username" type="text" placeholder="Username">
+            </div>
+            <div>
+                <input id="street-adress" name="street-adress" type="text" placeholder="Street address">
+                <input id="city" name="city" type="text" placeholder="City">
+                <input id="zip" name="zip" type="number" placeholder="ZIP Code">
+            </div>
+            <div>
+                <select id="country" name="country">
+                    <option value="FR">France</option>
+                    <option value="BE">Belgique</option>
+                    <option value="CH">Suisse (Sweich)</option>
+                </select>
+            </div>
+            <div>
+                <input id="phone-number" name="phone-number" type="tel" placeholder="Phone Number">
+            </div>
+            <div>
+                <input id="email" name="email" type="email" placeholder="Email">
+            </div>
+            <div>
+                <input id="password" name="password" type="password" placeholder="Password">
+            </div>
+            <div>
+                <input id="bio" name="bio" type="text" placeholder="bio">
+            </div>
+            <button id="save-button" type ="submit">save</button>
+        </form>
     </main>
 <script src="assets/profile.js"></script>
 </body>

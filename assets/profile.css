@@ -12,8 +12,6 @@ body {
     font-size: 16px;
     color:#FFFFFF;
     text-align: center;
-    align-items: center;
-    justify-content: center;
     position: relative;
     
 }
@@ -22,24 +20,114 @@ header {
     background-color: #7269E1;
     font-size: 16px;
     text-align: left;
-    max-height: 6vh;
+    height : clamp(30px, 6vh, 100px)
+}
 
+.nav-button {
+    position: absolute;
+    right:0%;
+    top:0%;
 }
 
 #logo-img {
-    height: 6vh;
+    height : clamp(30px, 6vh, 100px);
 }
 
 #logo-btn {
-    height: 6.5vh;
+    height: clamp(30px, 6.5vh, 100px);
     position: absolute;
-    opacity: 0;
+    opacity: 01;
     top: 0;
     left: 0;
-    width: 6.5vh;
+    width: clamp(30px, 6vh, 100px);
 
 }
 
-.main {
-    display: block;
+#infos-form {
+    width: 100%;
+    height: 90%;
 }
+
+.names {
+        width: 90vw;
+        text-align: center;
+        display : flex;
+        justify-content: space-between;
+        gap: 15vmin;
+        position: relative;
+        left: 5%;
+}
+
+#pfp-img {
+        height: clamp(10px, 20%, 200px);
+        width: clamp(10px, 20%, 200px);
+        border-radius: 50%;
+        object-fit: cover;
+        margin: 1% 1% 2% 1%;
+    }
+
+    .background {
+    display : block;
+    position: absolute;
+    left: 2.5%;
+    width: 95%;
+    height: 80%;
+    }
+
+    #lsbg {
+        display: none;
+    }
+
+    
+    @media (orientation: landscape) {
+        #lsbg {
+            display: block;
+            height: 65%;
+        }
+        #ptbg {
+            display: none;
+        }
+    }
+
+    #last-name, #first-name {
+        margin-top: 2vh;
+    }
+
+    /* Making the buttons to be on the middle with the right size*/
+        #last-name, #first-name, #country, #username, #password,
+        #email, #bio, #save-button, #phone-number, #street-adress, #city, #zip {
+            background-color: #7156DF;
+            border-style: none;
+            border-radius: 16vh;
+            height: clamp(25px, 30px, 35px);
+            width: 90%;
+            color:#FFFFFF;
+            text-align: center;
+            font-size: 25%;
+            margin-bottom: 2vh;
+            position: relative;
+            
+        }
+
+        #street-adress {
+        width: 45%;
+        position: absolute;
+        left: 5%;
+        }
+    
+        #city {
+        width: 25%;
+        position:relative;
+        left: 17%;
+        }
+    
+        #zip {
+        width: 15%;
+        position: absolute;
+        right: 5%;
+        }
+
+        #save-button {
+            width: 30%;
+            border-radius: 60px;
+        }

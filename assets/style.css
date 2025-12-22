@@ -1,0 +1,41 @@
+@font-face {
+    font-family: 'OpenDyslexic';
+    src: url('fonts/OpenDyslexic-Regular.woff2') format('woff2'),
+         url('fonts/OpenDyslexic-Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+body {
+    font-family: 'OpenDyslexic', 'Arial', 'Helvetica', sans-serif;
+    background-color: #6A4FB5;
+    font-size: 16px;
+    color:#FFFFFF;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    
+}
+
+header {
+    background-color: #7269E1;
+    font-size: 16px;
+    text-align: left;
+    max-height: 6vh;
+
+}
+
+#logo-img {
+    height: 6vh;
+}
+
+#logo-btn {
+    height: 6.5vh;
+    position: absolute;
+    opacity: 0;
+    top: 0;
+    left: 0;
+    width: 6.5vh;
+
+}
