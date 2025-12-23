@@ -1,0 +1,7 @@
+#pfp-img {
+        height: clamp(10px, 20%, 100px);
+        width: clamp(10px, 20%, 100px);
+        border-radius: 50%;
+        object-fit: cover;
+        margin-bottom: 100px;
+}

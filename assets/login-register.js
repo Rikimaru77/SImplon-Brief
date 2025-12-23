@@ -7,6 +7,7 @@ const login_btn = document.getElementById("login-button-a");
 const login_btn_a = document.getElementById("login-button-b");
 const login_form = document.getElementById("login-form");
 const currentUser = localStorage.getItem("current_username")
+const header = document.querySelector('header');
 
 if (localStorage.getItem("user_" + currentUser + "_connect") === "true") {
     window.location.href = "furrytel-profile.html";
@@ -17,8 +18,9 @@ function checkOrientation() {
   
   if (window.innerWidth > window.innerHeight) {
     header.style.display = 'block';
+    header.style.backgroundColor = '#7269e1'
   } else {
-    header.style.display = 'none';
+    header.style.backgroundColor = '#6a4fb5'
   }
 }
 
@@ -36,7 +38,9 @@ login_btn.addEventListener("click", ()=> {
     register_form.style.display = "none";
     welcome_user.style.display = "none";
     header.style.display = "block";
-})
+    header.style.display = 'block';
+    header.style.backgroundColor = '#7269e1'
+});
 
 register_btn_a.addEventListener("click",()=> {
     register_form.style.display = "block";
@@ -51,18 +55,20 @@ login_btn_a.addEventListener("click", ()=> {
     register_form.style.display = "none";
     welcome_user.style.display = "none";
     header.style.display = "block";
-})
+    header.style.backgroundColor = '#7269e1'
+});
 
 welcome_page_button.addEventListener("click", ()=> {
     login_form.style.display = "none";
     register_form.style.display = "none";
     welcome_user.style.display = "block";
     header.style.display = "block";
-})
+    header.style.backgroundColor = '#7269e1'
+});
 
 while (register_form.style.display === "block") {
     window.addEventListener('resize', checkOrientation);
-}
+};
 
 function register() {
 
@@ -70,16 +76,22 @@ function register() {
   const password = document.getElementById("password").value;
   const confirmPassword = document.getElementById("confirm-password").value;
   const email = document.getElementById("email").value;
-  const lastname = document.getElementById("last-name").value;
-  const firstname = document.getElementById("first-name").value;
+  const lastName = document.getElementById("last-name").value;
+  const firstName = document.getElementById("first-name").value;
   const country = document.getElementById("country").value;
-  const hashedPassword = simpleHash(password)
+  const hashedPassword = Hash(password);
+  const bio = "";
+  const phoneNumber = "";
+  const streetAdress = "";
+  const city = "";
+  const zip = "";
+
 
   if (
     username === "" ||
     password === "" ||
-    lastname === "" ||
-    firstname === "" ||
+    lastName === "" ||
+    firstName === "" ||
     country === ""
   ) {
     alert("Please fill all of the forms");
@@ -99,12 +111,17 @@ function register() {
   localStorage.setItem("user_" + username + "_password", hashedPassword);
   localStorage.setItem("user_" + username + "_email", email);
   localStorage.setItem("user_" + username + "_country", country);
-  localStorage.setItem("user_" + username + "_lastname", lastname);
-  localStorage.setItem("user_" + username + "_firstname", firstname);
+  localStorage.setItem("user_" + username + "_lastname", lastName);
+  localStorage.setItem("user_" + username + "_firstname", firstName);
   localStorage.setItem("user_" + username + "_exist", "true");
   localStorage.setItem("user_" + username + "_connect", "true");
   localStorage.setItem("user_" + username + "_username", username);
   localStorage.setItem("active_user", username);
+  localStorage.setItem("user_" + username + "_bio", bio);
+  localStorage.setItem("user_" + username + "_phonenumber", phoneNumber);
+  localStorage.setItem("user_" + username + "_streetaddress", streetAdress);
+  localStorage.setItem("user_" + username + "_city", city);
+  localStorage.setItem("user_" + username + "_zip", zip);
 
   window.location.href = "furrytel-profile.html";
 }
@@ -114,7 +131,7 @@ document.getElementById("register-form").addEventListener("submit", function (ev
   register();
 });
 
-function simpleHash(string) {
+function Hash(string) {
   let hash = 0;
   for (let i = 0; i < string.length; i++) {
     const char = string.charCodeAt(i);
@@ -127,7 +144,7 @@ function simpleHash(string) {
 function loginin() {
   const username = document.getElementById("login-id").value;
   const password = document.getElementById("password-id").value;
-  const hashedPassword = simpleHash(password);
+  const hashedPassword = Hash(password);
   const storedHash = localStorage.getItem("user_" + username + "_password");
 
   if (!localStorage.getItem("user_" + username + "_exist")) {

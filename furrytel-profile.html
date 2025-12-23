@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="assets/style.css">
     <link rel="stylesheet" href="assets/reset.css">
     <link rel="stylesheet" href="assets/profile.css">
-    <title>Document</title>
+    <title>Profile Page</title>
 </head>
 <body>
     <header id ="navbar" class="navbar-class">
@@ -16,23 +16,24 @@
             <button id="logo-btn"></button>
         </div>
         <div class="nav-button">
-            <button type="button" onclick="logout()">Log out</button>
+            <button id="logout" onclick="logout()">Log out</button>
         </div>
     </header>
 
     <main id="main">
         <img id="pfp-img" src="assets/pfp/icon.png">
         <form id="infos-form">
-            <img id="ptbg" class="background" src="assets/background/background.png">
+            <img id="ptbg" class="background" src="assets/background/background-portrait.png">
             <img id="lsbg" class="background" src="assets/background/background-landscape.png">
             <div class="names">
-                <input id="last-name" name="last-name" type="text" readonly><input id="first-name" name="first-name" type="text" readonly>
+                <input id="last-name" name="last-name" type="text" readonly tabindex="-1">
+                <input id="first-name" name="first-name" type="text" readonly tabindex="-1">
             </div>
             <div>
                 <input id="username" name="username" type="text" placeholder="Username">
             </div>
             <div>
-                <input id="street-adress" name="street-adress" type="text" placeholder="Street address">
+                <input id="street-address" name="street-address" type="text" placeholder="Street address">
                 <input id="city" name="city" type="text" placeholder="City">
                 <input id="zip" name="zip" type="number" placeholder="ZIP Code">
             </div>
@@ -50,14 +51,16 @@
                 <input id="email" name="email" type="email" placeholder="Email">
             </div>
             <div>
-                <input id="password" name="password" type="password" placeholder="Password">
-            </div>
-            <div>
                 <input id="bio" name="bio" type="text" placeholder="bio">
             </div>
-            <button id="save-button" type ="submit">save</button>
-        </form>
+            <button id="save-button">Save</button>
+        </form><br>
+        <footer>
+            <a href="#home">© 2025 Furrytel</a>
+            <p><a href="#LM">Mentions légales</a> | <a href="#PP">Politique de confidentialité</a> | <a href="#cookies">Cookies</a> | <a href="#contact">Contact</a></p>
+        </footer>
     </main>
-<script src="assets/profile.js"></script>
+    <script src="assets/general.js"></script>
+    <script src="assets/profile.js"></script>
 </body>
 </html>

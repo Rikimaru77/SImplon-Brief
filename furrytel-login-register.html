@@ -4,9 +4,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/antijingoist/opendyslexic@0.1.1/opendyslexic.css">
-    <title>Document</title>
-    <link rel="stylesheet" href="assets/style.css">
+    <title>Login and Register Page</title>
     <link rel="stylesheet" href="assets/reset.css">
+    <link rel="stylesheet" href="assets/style.css">
     <link rel="stylesheet" href="assets/login-register.css">
 </head>
 
@@ -18,57 +18,62 @@
         </div>
     </header>
     
-    <main id="welcome-page">
-        <p id="login-txt">You already have an account ? Log in !</p>
-        <button id="login-button-a" class="center-buttons">Log in !</button><br>
-        <button id="register-button-a" class="center-buttons">Register !</button>
-        <p id="register-txt">You don't have an account ? Register !</p>
+    <main>
+        <section id="welcome-page">
+            <p id="login-txt">You already have an account ? Log in !</p>
+            <button id="login-button-a" class="center-buttons">Log in !</button><br>
+            <button id="register-button-a" class="center-buttons">Register !</button>
+            <p id="register-txt">You don't have an account ? Register !</p>
+        </section>
+        <section id="register-part">
+            <img id ="pfp-img" src="assets/pfp/icon.png">
+            <form id="register-form">
+            
+                <div class="names">
+                    <input id="last-name" name="last-name" type="text" required placeholder="Last name">
+                    <input id="first-name" name="first-name" type="text" required placeholder="First name">
+                </div>
+                <div>
+                    <select id="country" name="country" required>
+                        <option value="">Country</option>
+                        <option value="FR">France</option>
+                        <option value="BE">Belgique</option>
+                        <option value="CH">Suisse (Sweich)</option>
+                    </select>
+                </div>
+                <div>
+                    <input id="username" name="username" type="text" required placeholder="Username">
+                </div>
+                <div>
+                    <input id="email" name="email" type="email" required placeholder="Email">
+                </div>
+                <div>
+                    <input id="password" name="password" type="password" required placeholder="Password">
+                </div>
+                <div>
+                    <input id="confirm-password" name="confirm-password" type="password" required placeholder="Confirm password">
+                </div>
+                <button id="get-registered-button" type ="submit">Register</button>
+                <p id="log-btn-txt">Already have an account ? <button id="login-button-b" type="button">Log in here !</button></p>
+            </form>
+        </section>
+        <section id="login-form">
+            <form>
+                <div>
+                    <input id="login-id" name="login-id" type="text" required placeholder="Username, Phone Number or Email">
+                </div>
+                <div>
+                    <input id="password-id" name="password-id" type="password" required placeholder="Password">
+                </div>
+                <button id="get-loggedin-button" type="submit">Log In</button>
+                <p id="reg-btn-txt">You don't have an account ? <button id="register-button-b" type="button">Register here !</button></p><br>
+            </form>
+        </section>
     </main>
-
-    <section id="register-part">
-        <img id ="pfp-img" src="assets/pfp/icon.png">
-        <form id="register-form">
-        
-            <div class="names">
-                <input id="last-name" name="last-name" type="text" required placeholder="Last name">
-                <input id="first-name" name="first-name" type="text" required placeholder="First name">
-            </div>
-            <div>
-                <select id="country" name="country" required>
-                    <option value="">Country</option>
-                    <option value="FR">France</option>
-                    <option value="BE">Belgique</option>
-                    <option value="CH">Suisse (Sweich)</option>
-                </select>
-            </div>
-            <div>
-                <input id="username" name="username" type="text" required placeholder="Username">
-            </div>
-            <div>
-                <input id="email" name="email" type="email" required placeholder="Email">
-            </div>
-            <div>
-                <input id="password" name="password" type="password" required placeholder="Password">
-            </div>
-            <div>
-                <input id="confirm-password" name="confirm-password" type="password" required placeholder="Confirm password">
-            </div>
-            <button id="get-registered-button" type ="submit">Register</button>
-            <p id="log-btn-txt">Already have an account ? <button id="login-button-b" type="button">Log in here !</button></p>
-        </form>
-    </section>
-    <section id="login-form">
-        <form>
-            <div>
-                <input id="login-id" name="login-id" type="text" required placeholder="Username, Phone Number or Email">
-            </div>
-            <div>
-                <input id="password-id" name="password-id" type="password" required placeholder="Password">
-            </div>
-            <button id="get-loggedin-button" type="submit">Log In</button>
-            <p id="reg-btn-txt">You don't have an account ? <button id="register-button-b" type="button">Register here !</button></p>
-        </form>
-    </section> 
+    <footer>
+        <a href="#home">© 2025 Furrytel</a>
+        <p><a href="#LM">Mentions légales</a> | <a href="#PP">Politique de confidentialité</a> | <a href="#cookies">Cookies</a> | <a href="#contact">Contact</a></p>
+    </footer>
 <script src="assets/login-register.js"></script>
 </body>
 </html>
