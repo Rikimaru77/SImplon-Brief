@@ -11,13 +11,13 @@ function logout() {
   }
 
   // 4. Redirect them back to the login page
-  window.location.href = "furrytel-login-register.html"; 
+  window.location.href = "../Login-Register/furrytel-login-register.html"; 
 }
 
 const welcome_page_button = document.getElementById("logo-btn");
 
 welcome_page_button.addEventListener("click", ()=> {
-    window.location.href = "furrytel.html";
+    window.location.href = "../furrytel.html";
 });
 
 if (window.location.pathname.includes("furrytel-profile.html")) {
@@ -25,16 +25,7 @@ if (window.location.pathname.includes("furrytel-profile.html")) {
 
     if (!currentUser || localStorage.getItem("user_" + currentUser + "_connect") === "false") {
         alert("You must log in first.");
-        window.location.href = "furrytel-login-register.html";
-    }
-}
-
-if (window.location.pathname.includes("index.html")) {
-    const currentUser = localStorage.getItem("active_user");
-
-    if (!currentUser || localStorage.getItem("user_" + currentUser + "_connect") === "false") {
-        alert("You must log in first.");
-        window.location.href = "Login-Register/furrytel-login-register.html";
+        window.location.href = "../Login-Register/furrytel-login-register.html";
     }
 }
 
@@ -43,6 +34,6 @@ if (window.location.pathname.includes("furrytel.html")) {
 
     if (!currentUser || localStorage.getItem("user_" + currentUser + "_connect") === "false") {
         alert("You must log in first.");
-        window.location.href = "furrytel-login-register.html";
+        window.location.href = "../Login-Register/furrytel-login-register.html";
     }
 }
