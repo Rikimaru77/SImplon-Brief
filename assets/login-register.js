@@ -136,7 +136,7 @@ function Hash(string) {
   for (let i = 0; i < string.length; i++) {
     const char = string.charCodeAt(i);
     hash = (hash << 5) - hash + char;
-    hash |= 0;
+    hash |= 0; // perte de données pour sécurité
   }
   return hash.toString();
 }

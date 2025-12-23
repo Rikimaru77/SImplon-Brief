@@ -1,14 +1,5 @@
 const main = document.getElementById("main");
 
-if (window.location.pathname.includes("furrytel-profile.html")) {
-    const currentUser = localStorage.getItem("active_user");
-
-    if (!currentUser || localStorage.getItem("user_" + currentUser + "_connect") === "false") {
-        alert("You must log in first.");
-        window.location.href = "furrytel-login-register.html";
-    }
-}
-
 function checkOrientation() {
   const header = document.querySelector('header');
   
@@ -126,7 +117,7 @@ function saveProfile(event) {
     "bio",
     "exist",
     "connect",
-    "password"   // <-- add password here
+    "password"
   ];
 
   // If the username changed, rename all keys including password

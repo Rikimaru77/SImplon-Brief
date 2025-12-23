@@ -19,3 +19,21 @@ const welcome_page_button = document.getElementById("logo-btn");
 welcome_page_button.addEventListener("click", ()=> {
     window.location.href = "furrytel.html";
 });
+
+if (window.location.pathname.includes("furrytel-profile.html")) {
+    const currentUser = localStorage.getItem("active_user");
+
+    if (!currentUser || localStorage.getItem("user_" + currentUser + "_connect") === "false") {
+        alert("You must log in first.");
+        window.location.href = "furrytel-login-register.html";
+    }
+}
+
+if (window.location.pathname.includes("furrytel.html")) {
+    const currentUser = localStorage.getItem("active_user");
+
+    if (!currentUser || localStorage.getItem("user_" + currentUser + "_connect") === "false") {
+        alert("You must log in first.");
+        window.location.href = "furrytel-login-register.html";
+    }
+}
