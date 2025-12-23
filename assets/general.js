@@ -34,6 +34,6 @@ if (window.location.pathname.includes("furrytel.html")) {
 
     if (!currentUser || localStorage.getItem("user_" + currentUser + "_connect") === "false") {
         alert("You must log in first.");
-        window.location.href = "../Login-Register/furrytel-login-register.html";
+        window.location.href = "Login-Register/furrytel-login-register.html";
     }
 }
