@@ -29,6 +29,15 @@ if (window.location.pathname.includes("furrytel-profile.html")) {
     }
 }
 
+if (window.location.pathname.includes("index.html")) {
+    const currentUser = localStorage.getItem("active_user");
+
+    if (!currentUser || localStorage.getItem("user_" + currentUser + "_connect") === "false") {
+        alert("You must log in first.");
+        window.location.href = "Login-Register/furrytel-login-register.html";
+    }
+}
+
 if (window.location.pathname.includes("furrytel.html")) {
     const currentUser = localStorage.getItem("active_user");
 
