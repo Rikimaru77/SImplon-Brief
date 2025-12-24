@@ -10,7 +10,7 @@ const currentUser = localStorage.getItem("current_username")
 const header = document.querySelector('header');
 
 if (localStorage.getItem("user_" + currentUser + "_connect") === "true") {
-    window.location.href = "https://rikimaru77.github.io/Simplon-Brief/Profile/furrytel-profile.html";
+    window.location.href = "https://rikimaru77.github.io/SImplon-Brief/Profile/furrytel-profile.html";
 }
 
 function checkOrientation() {
@@ -123,7 +123,7 @@ function register() {
   localStorage.setItem("user_" + username + "_city", city);
   localStorage.setItem("user_" + username + "_zip", zip);
 
-  window.location.href = "https://rikimaru77.github.io/Simplon-Brief/Profile/furrytel-profile.html";
+  window.location.href = "https://rikimaru77.github.io/SImplon-Brief/Profile/furrytel-profile.html";
 }
 
 document.getElementById("register-form").addEventListener("submit", function (event) {
@@ -159,7 +159,7 @@ function loginin() {
 
   localStorage.setItem("user_" + username + "_connect", "true");
   localStorage.setItem("active_user", username);
-  window.location.href = "https://rikimaru77.github.io/Simplon-Brief/Profile/furrytel-profile.html";
+  window.location.href = "https://rikimaru77.github.io/SImplon-Brief/Profile/furrytel-profile.html";
 }
 
 document.getElementById("login-form").addEventListener("submit", function (event) {
