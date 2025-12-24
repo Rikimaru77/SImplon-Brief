@@ -28,7 +28,7 @@ function logout() {
   }
 
   // 4. Redirect them back to the login page
-  window.location.href = "../Login-Register/furrytel-profile.html"; 
+  window.location.href = "https://rikimaru77.github.io/Simplon-Brief/Login-Register/furrytel-profile.html"; 
 }
 
 document.addEventListener("DOMContentLoaded", () => {
@@ -147,5 +147,5 @@ function saveProfile(event) {
   localStorage.setItem("active_user", newUsername);
 
   // Redirect to homepage
-  window.location.href = "../furrytel.html";
+  window.location.href = "https://rikimaru77.github.io/Simplon-Brief/furrytel.html";
 }

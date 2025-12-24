@@ -11,13 +11,13 @@ function logout() {
   }
 
   // 4. Redirect them back to the login page
-  window.location.href = "../Login-Register/furrytel-login-register.html"; 
+  window.location.href = "https://rikimaru77.github.io/Simplon-Brief/Login-Register/furrytel-login-register.html"; 
 }
 
 const welcome_page_button = document.getElementById("logo-btn");
 
 welcome_page_button.addEventListener("click", ()=> {
-    window.location.href = "../furrytel.html";
+    window.location.href = "https://rikimaru77.github.io/Simplon-Brief/furrytel.html";
 });
 
 if (window.location.pathname.includes("furrytel-profile.html")) {
@@ -25,7 +25,7 @@ if (window.location.pathname.includes("furrytel-profile.html")) {
 
     if (!currentUser || localStorage.getItem("user_" + currentUser + "_connect") === "false") {
         alert("You must log in first.");
-        window.location.href = "../Login-Register/furrytel-login-register.html";
+        window.location.href = "https://rikimaru77.github.io/Simplon-Brief/Login-Register/furrytel-login-register.html";
     }
 }
 
@@ -34,6 +34,6 @@ if (window.location.pathname.includes("furrytel.html")) {
 
     if (!currentUser || localStorage.getItem("user_" + currentUser + "_connect") === "false") {
         alert("You must log in first.");
-        window.location.href = "../Login-Register/furrytel-login-register.html";
+        window.location.href = "https://rikimaru77.github.io/Simplon-Brief/Login-Register/furrytel-login-register.html";
     }
 }
