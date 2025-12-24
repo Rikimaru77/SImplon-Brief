@@ -28,7 +28,7 @@ function logout() {
   }
 
   // 4. Redirect them back to the login page
-  window.location.href = "https://rikimaru77.github.io/SImplon-Brief/Login-Register/furrytel-profile.html"; 
+  window.location.href = "https://rikimaru77.github.io/SImplon-Brief/Login-Register/furrytel-login-register.html"; 
 }
 
 document.addEventListener("DOMContentLoaded", () => {
